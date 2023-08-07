@@ -32,10 +32,10 @@
 import random
 import string
 import time
+#设定随机代码的个数
+#rd_length = 8
+rd_length = int(float(input('请输入几位加密')))
 def rd_Key():
-    #设定随机代码的个数
-    rd_length = 8
-    #rd_length = int(input('请输入需要几位加密'))
     #生成随机数 阿拉伯数字，ascii码，特殊符号
     rd_hub = string.digits + string.ascii_letters + string.punctuation
     # k =  不能省略，代表末尾参数  choices有很多参数
@@ -44,6 +44,8 @@ def rd_Key():
     return rd_pw
 ## 执行生成key
 #rd_Key()
+
+# 定义词典
 tinydict = {}
 with open('chinese.txt', 'r', encoding='utf-8') as f:
     data_value = f.read()
